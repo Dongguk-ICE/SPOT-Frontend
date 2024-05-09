@@ -1,20 +1,20 @@
 import Image from '../../components/Image';
 import KakaoLogin from '../../components/KakaoLogin';
-import Text from '../../components/Text';
+import Text from '../../components/Common/Text';
 import * as S from './OnBoarding.styled';
-import {login} from '../../apis/login';
 
 function OnBoarding() {
-  const handleLogin = () => {
-    const response = login();
-    console.log(response);
-  };
-
   return (
     <S.Container>
       <Image></Image>
-      <Text></Text>
-      <KakaoLogin onClick={handleLogin}></KakaoLogin>
+      <S.TextArea>
+        <Text>
+          <h2>내 주변 킥보드 주차장 찾기</h2>
+        </Text>
+        <Text>올바른 공유킥보드 주차 문화 만들기</Text>
+        <Text>SPOT에서 함께 시작하세요!</Text>
+      </S.TextArea>
+      <KakaoLogin></KakaoLogin>
     </S.Container>
   );
 }
